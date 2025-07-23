@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import profile from "@/assests/profile.jpg";
 import { motion } from "framer-motion";
 import {
   TwitterIcon,
@@ -11,8 +12,8 @@ import {
   ArrowRight,
   Download,
 } from "lucide-react";
-import PlaceholderImage from "../components/PlaceholderImage";
 import AnimatedBackground from "../components/AnimatedBackground";
+import Image from "next/image";
 
 const Portfolio = () => {
   const containerVariants = {
@@ -118,7 +119,7 @@ const Portfolio = () => {
         <div className="flex items-center min-h-[calc(100vh-100px)] px-8">
           {/* Left Side - Vertical Text */}
           <motion.div
-            className="hidden lg:flex flex-col items-center space-y-8 fixed left-8 top-1/2 transform -translate-y-1/2 z-10"
+            className="hidden lg:flex flex-col items-center space-y-8 mr-8 self-start pt-50"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
@@ -162,24 +163,32 @@ const Portfolio = () => {
           <div className="flex-1 flex items-center justify-center lg:justify-between max-w-7xl mx-auto">
             {/* Hero Image and Text */}
             <motion.div
-              className="relative flex items-center"
+              className="relative flex items-center self-start pt-25 pl-45"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
               {/* Large "anish" Text */}
               <motion.div
-                className="absolute -left-20 top-1/2 transform -translate-y-1/2 -rotate-90 text-6xl lg:text-8xl font-bold text-gray-200 select-none font-poppins"
-                initial={{ opacity: 0, rotate: -135, scale: 0.8 }}
-                animate={{ opacity: 1, rotate: -90, scale: 1 }}
+                className="absolute -left-10 top-0 bottom-0 flex items-center z-20 pointer-events-none"
+                initial={{ opacity: 0, x: -50, scale: 0.8 }}
+                animate={{ opacity: 1, x: 0, scale: 1 }}
                 transition={{
                   delay: 1,
                   duration: 1.2,
                   type: "spring",
                   stiffness: 50,
                 }}
+              ></motion.div>
+
+              {/* Vertical "missed out on my newsletter" text - positioned near image */}
+              <motion.div
+                className="absolute -right-55 top-1/2 transform rotate--180 text-sm text-gray-400 whitespace-nowrap font-light tracking-widest uppercase z-30"
+                initial={{ opacity: 0, rotate: 45 }}
+                animate={{ opacity: 1, rotate: 90 }}
+                transition={{ delay: 1.2, duration: 0.8 }}
               >
-                anish
+                missed out on my newsletter
               </motion.div>
 
               {/* Profile Image */}
@@ -206,7 +215,13 @@ const Portfolio = () => {
                     }}
                   />
                   <div className="absolute inset-4 bg-gradient-to-br from-yellow-300 to-yellow-400 rounded-xl overflow-hidden">
-                    <PlaceholderImage alt="anish" className="w-full h-full" />
+                    <Image
+                      src={profile}
+                      // src="/path/to/your/image.jpg"
+                      alt="anish"
+                      fill
+                      className="object-cover object-center"
+                    />
                   </div>
                 </div>
 
@@ -260,16 +275,6 @@ const Portfolio = () => {
               initial="hidden"
               animate="visible"
             >
-              {/* Vertical "missed out on my" text */}
-              <motion.div
-                className="absolute right-8 top-1/2 transform -translate-y-1/2 rotate-90 text-sm text-gray-400 whitespace-nowrap hidden xl:block font-light tracking-widest uppercase"
-                initial={{ opacity: 0, rotate: 45 }}
-                animate={{ opacity: 1, rotate: 90 }}
-                transition={{ delay: 1.2, duration: 0.8 }}
-              >
-                missed out on my newsletter
-              </motion.div>
-
               <motion.h1
                 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-800 mb-6 font-poppins leading-tight"
                 variants={itemVariants}
@@ -277,10 +282,10 @@ const Portfolio = () => {
                 Why Me
               </motion.h1>
 
-              <motion.div className="space-y-4 mb-8" variants={itemVariants}>
+              <motion.div className="space-y-4 mb-8 " variants={itemVariants}>
                 <div className="h-80 overflow-hidden relative scroll-container">
                   <div className="absolute animate-scroll w-full">
-                    <div className="space-y-8">
+                    <div className="space-y-8 cursor-default">
                       <p className="text-gray-600 leading-relaxed text-lg font-light">
                         Because I craft with care, not just code or design,
                         <br /> Each pixel placed, each thought a line.
@@ -336,7 +341,7 @@ const Portfolio = () => {
               </motion.div>
 
               <motion.button
-                className="group flex items-center space-x-3 border-2 border-gray-800 px-8 py-4 hover:bg-gray-800 hover:text-white transition-all duration-300 font-medium tracking-wide uppercase text-sm"
+                className="group flex items-center cursor-pointer space-x-3 border-2 border-gray-800 px-8 py-4 hover:bg-gray-800 hover:text-white transition-all duration-300 font-medium tracking-wide uppercase text-sm "
                 variants={itemVariants}
                 whileHover={{
                   scale: 1.05,
@@ -350,51 +355,6 @@ const Portfolio = () => {
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </motion.button>
-
-              {/* Latest Work Section */}
-              <motion.div className="mt-16" variants={itemVariants}>
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-8 font-poppins">
-                  Latest Work
-                </h2>
-
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-                  {[1, 2, 3].map((item, index) => (
-                    <motion.div
-                      key={item}
-                      className="aspect-square bg-gray-200 rounded-xl overflow-hidden group cursor-pointer shadow-lg"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        delay: 1.6 + index * 0.1,
-                        duration: 0.4,
-                      }}
-                      whileHover={{
-                        scale: 1.05,
-                        rotate: 2,
-                        boxShadow: "0 15px 35px rgba(0,0,0,0.1)",
-                      }}
-                    >
-                      <motion.div
-                        className="w-full h-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:via-pink-500 group-hover:to-yellow-500 transition-all duration-500 flex items-center justify-center"
-                        whileHover={{ scale: 1.1 }}
-                      >
-                        <div className="w-16 h-16 bg-white/20 rounded-full backdrop-blur-sm"></div>
-                      </motion.div>
-                    </motion.div>
-                  ))}
-                </div>
-
-                <motion.a
-                  href="#"
-                  className="inline-block mt-6 text-cyan-500 hover:text-cyan-600 transition-colors font-medium tracking-wide"
-                  whileHover={{ x: 10 }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 2, duration: 0.4 }}
-                >
-                  view all →
-                </motion.a>
-              </motion.div>
             </motion.div>
           </div>
         </div>
