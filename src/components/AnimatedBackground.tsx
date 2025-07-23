@@ -72,7 +72,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
           duration: 5,
           repeat: Infinity,
           ease: "easeInOut",
-          delay: 2,
+          delay: 5,
         }}
       />
 

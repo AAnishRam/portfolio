@@ -163,24 +163,11 @@ const Portfolio = () => {
           <div className="flex-1 flex items-center justify-center lg:justify-between max-w-7xl mx-auto">
             {/* Hero Image and Text */}
             <motion.div
-              className="relative flex items-center self-start pt-25 pl-45"
+              className="relative flex items-center self-start pt-3 pl-45"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
-              {/* Large "anish" Text */}
-              <motion.div
-                className="absolute -left-10 top-0 bottom-0 flex items-center z-20 pointer-events-none"
-                initial={{ opacity: 0, x: -50, scale: 0.8 }}
-                animate={{ opacity: 1, x: 0, scale: 1 }}
-                transition={{
-                  delay: 1,
-                  duration: 1.2,
-                  type: "spring",
-                  stiffness: 50,
-                }}
-              ></motion.div>
-
               {/* Vertical "missed out on my newsletter" text - positioned near image */}
               <motion.div
                 className="absolute -right-55 top-1/2 transform rotate--180 text-sm text-gray-400 whitespace-nowrap font-light tracking-widest uppercase z-30"
@@ -287,57 +274,67 @@ const Portfolio = () => {
                   <div className="absolute animate-scroll w-full">
                     <div className="space-y-8 cursor-default">
                       <p className="text-gray-600 leading-relaxed text-lg font-light">
-                        Because I craft with care, not just code or design,
-                        <br /> Each pixel placed, each thought a line.
-                        <br /> Not chasing trends that fade too fast,
-                        <br /> But building things that truly last.
+                        I speak in semicolons, dream in design,
+                        <br /> Where logic and beauty perfectly align.
+                        <br /> Not just a coder, but a craftsman of flow,
+                        <br /> Turning fleeting ideas into products that glow.
                         <br />
-                        <br /> Because I listen — not just hear —
-                        <br /> To dreams you hold, to goals held dear.
-                        <br /> I bridge your vision with my skill,
-                        <br /> Turning quiet hopes into something real.
+                        <br /> I see the spark in every brief,
+                        <br /> The silent need, the hidden grief.
+                        <br /> From frontend charm to backend might,
+                        <br /> I weave user dreams into seamless delight.
                         <br />
-                        <br /> Because I seek the soul in art,
-                        <br /> The human pulse in every part.
-                        <br /> Not just to build, but to ignite,
-                        <br /> To shape your story into light.
+                        <br /> APIs whisper, and pixels respond,
+                        <br /> In every line, a deeper bond.
+                        <br /> Frameworks bend to thought and feel,
+                        <br /> While servers hum with purpose real.
                         <br />
-                        <br /> So why me?
-                        <br /> Because I blend the mind and heart,
-                        <br /> In every project, I live my part.
-                        <br /> Not just a maker, but a muse —
-                        <br /> To craft the path that you would choose.
+                        <br /> I'm not just here to build what's due,
+                        <br /> But to shape bold futures, code them true.
+                        <br /> Tech with a soul — clean, precise,
+                        <br /> Where function dances with device.
+                        <br />
+                        <br /> So <b>Why Me?</b>
+                        <br /> Because I craft with clarity and grace,
+                        <br /> A human touch in every interface.
+                        <br /> Innovation, heart, and clarity —
+                        <br /> That’s the blend you’ll find in me.
                       </p>
                       <p className="text-gray-600 leading-relaxed text-lg font-light">
-                        Because I craft with care, not just code or design,
-                        <br /> Each pixel placed, each thought a line.
-                        <br /> Not chasing trends that fade too fast,
-                        <br /> But building things that truly last.
+                        I speak in semicolons, dream in design,
+                        <br /> Where logic and beauty perfectly align.
+                        <br /> Not just a coder, but a craftsman of flow,
+                        <br /> Turning fleeting ideas into products that glow.
                         <br />
-                        <br /> Because I listen — not just hear —
-                        <br /> To dreams you hold, to goals held dear.
-                        <br /> I bridge your vision with my skill,
-                        <br /> Turning quiet hopes into something real.
+                        <br /> I see the spark in every brief,
+                        <br /> The silent need, the hidden grief.
+                        <br /> From frontend charm to backend might,
+                        <br /> I weave user dreams into seamless delight.
                         <br />
-                        <br /> Because I seek the soul in art,
-                        <br /> The human pulse in every part.
-                        <br /> Not just to build, but to ignite,
-                        <br /> To shape your story into light.
+                        <br /> APIs whisper, and pixels respond,
+                        <br /> In every line, a deeper bond.
+                        <br /> Frameworks bend to thought and feel,
+                        <br /> While servers hum with purpose real.
                         <br />
-                        <br /> So why me?
-                        <br /> Because I blend the mind and heart,
-                        <br /> In every project, I live my part.
-                        <br /> Not just a maker, but a muse —
-                        <br /> To craft the path that you would choose.
+                        <br /> I'm not just here to build what's due,
+                        <br /> But to shape bold futures, code them true.
+                        <br /> Tech with a soul — clean, precise,
+                        <br /> Where function dances with device.
+                        <br />
+                        <br /> So <b>Why Me?</b>
+                        <br /> Because I craft with clarity and grace,
+                        <br /> A human touch in every interface.
+                        <br /> Innovation, heart, and clarity —
+                        <br /> That’s the blend you’ll find in me.
                       </p>
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-600 leading-relaxed text-lg font-light">
+                {/* <p className="text-gray-600 leading-relaxed text-lg font-light">
                   At missed advice my it no sister. Miss told ham dull knew see
                   she spot near can. Spirit her entire her called. Detract yet
                   delight written farther his general.
-                </p>
+                </p> */}
               </motion.div>
 
               <motion.button
