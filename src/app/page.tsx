@@ -10,7 +10,6 @@ import {
   VideoIcon,
   InstagramIcon,
   ArrowRight,
-  Download,
 } from "lucide-react";
 import AnimatedBackground from "../components/AnimatedBackground";
 import Image from "next/image";
@@ -289,7 +288,7 @@ const Portfolio = () => {
                         <br /> Frameworks bend to thought and feel,
                         <br /> While servers hum with purpose real.
                         <br />
-                        <br /> I'm not just here to build what's due,
+                        <br /> I&apos;m not just here to build what&apos;s due,
                         <br /> But to shape bold futures, code them true.
                         <br /> Tech with a soul — clean, precise,
                         <br /> Where function dances with device.
@@ -316,7 +315,7 @@ const Portfolio = () => {
                         <br /> Frameworks bend to thought and feel,
                         <br /> While servers hum with purpose real.
                         <br />
-                        <br /> I'm not just here to build what's due,
+                        <br /> I&apos;m not just here to build what&apos;s due,
                         <br /> But to shape bold futures, code them true.
                         <br /> Tech with a soul — clean, precise,
                         <br /> Where function dances with device.
