@@ -6,7 +6,6 @@ COPY . .
 
 RUN npm install
 RUN npm run build
-RUN npm run export  # outputs static site to /out by default
 
 # Step 2: Serve with Nginx
 FROM nginx:alpine
